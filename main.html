@@ -1,29 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub Issues Tracker</title>
-    <link rel="shortcut icon" href="assets/github-logo.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/github-logo.png"
+      type="image/x-icon"
+    />
 
     <!-- font awesome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- daisy ui and tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+    />
 
     <!-- google font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-     <link rel="stylesheet" href="tailwind.init.css">
+    <link rel="stylesheet" href="tailwind.init.css" />
+  </head>
+  <body class="bg-gray-100">
 
-</head>
-<body class="bg-gray-100">
-    
+
+    <!--.............. Nabvar............. -->
+    <div class="navbar bg-white shadow px-10">
+      <div class="flex-1 flex items-center gap-2">
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          class="w-9"
+        />
+ 
+        <h1 class="text-neutral font-semibold text-lg">GitHub Issues Tracker</h1>
+      </div>
+
+      <div class="flex gap-3">
+        <input
+          id="searchInput"
+          placeholder="Search issues..."
+          class="input input-bordered input-sm w-64 p-3"
+        />
+
+        <button onclick="searchIssue()" class="btn btn-sm btn-outline">
+          Search
+        </button>
+
+        <button class="btn btn-sm btn-primary text-white">+ New Issue</button>
+      </div>
+    </div>
+
     <!-- js script -->
-     <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
