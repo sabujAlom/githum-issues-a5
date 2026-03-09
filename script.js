@@ -18,3 +18,29 @@ alert("Invalid Credentials")
 }
 
 }
+
+
+
+
+// ..................main js.......................
+const API="https://phi-lab-server.vercel.app/api/v1/lab/issues"
+
+
+async function loadIssues(type){
+
+const res=await fetch(API)
+const data=await res.json()
+
+let issues=data.data
+
+if(type!=="all"){
+issues=issues.filter(issue=>issue.status===type)
+}
+
+displayIssues(issues)
+
+issueCount.innerText=issues.length+" Issues"
+
+setActiveTab(type)
+
+}
