@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Sign In - GitHub Issues Tracker</title>
     <link rel="shortcut icon" href="assets/github-logo.png" type="image/x-icon">
 
     <!-- font awesome -->
@@ -21,9 +21,46 @@
      <link rel="stylesheet" href="tailwind.init.css">
 
 </head>
-<body>
-    
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="card w-96 bg-white shadow-xl p-8">
+      <div class="flex justify-center mb-4">
+        <img
+          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+          class="w-20 h-20"
+        />
+      </div>
 
+      <h2 class="text-center text-neutral text-2xl font-bold">
+        GitHub Issues Tracker
+      </h2>
+      <p class="text-center text-gray-500 mb-6">
+        Sign in to manage your issues
+      </p>
+
+      <input
+        id="username"
+        type="text"
+        placeholder="Username"
+        class="input input-bordered w-full"
+      />
+      <br />
+
+      <input
+        id="password"
+        type="password"
+        placeholder="Password"
+        class="input input-bordered w-full mb-8"
+      />
+
+      <button onclick="login()" class="btn btn-primary w-full">Sign In</button>
+      <hr/>
+      <br>
+      <h3 class="text-center text-lg text-gray-500 mt-4">Demo Credentials:</h3>
+      <p class="text-center text-sm text-gray-500 mt-2">
+        Demo: <b>admin / admin123</b>
+      </p>
+    </div>
+    
     <!-- js script -->
      <script src="./script.js"></script>
 </body>
